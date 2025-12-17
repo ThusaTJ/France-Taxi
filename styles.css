@@ -32,7 +32,7 @@ body{
 .navbar-brand img{
     height: 80px;
     width: auto;
-    max-width: 300px !important;
+    max-width: 250px !important;
 }
 
 .navbar, 
@@ -332,7 +332,6 @@ body{
 .why-choose-container {
     width: 100%;
     height: auto;
-    font-size: 23px;
     padding: 60px 20px;
     background: rgba(209, 174, 108, 0.3);
 }
@@ -346,7 +345,7 @@ body{
 }
 
 .why-choose-container p {
-    font-size: 20px;
+    font-size: 15px;
     margin-bottom: 30px;
     color: rgb(44 37 35);
 }
@@ -357,6 +356,7 @@ body{
     list-style: none;
     border: none;
     background: transparent;
+    font-size: 18px;
 }
 
 .why-choose-container img {
@@ -396,6 +396,7 @@ body{
     margin: 0 auto;
     position: relative;
     padding: 0 50px;
+    overflow: hidden;
 }
 
 .carousel-track {
