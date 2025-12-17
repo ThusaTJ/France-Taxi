@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groupe Blue Van Paris - Premium Transportation Service</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="img/logo.png">
+
+    </head>
+<body>
+    <div id="navbar"></div>
+
+    <!-- Hero Section -->
+    <section class="hero-section" style="margin-top: 60px;">
+        <div class="container">
+            <h1>About Us</h1>
+            <p>Based in Paris, Groupe Blue Van Paris has been providing top-quality private transportation since 1998. Specializing in airport transfers, city travel and Disneyland park or hotels, we ensure a seamless, comfortable, and professional experience for every passenger. With a commitment to reliability and customer satisfaction, 
+                we serve key destinations, including Charles de Gaulle, Orly, Beauvais, central Paris, and Disneyland.</p>
+            <button class="btn btn-outline-gold">Book Your Ride</button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h2>About Groupebluevanparis</h2>
+                    <p>Since 1998, Groupebluevanparis has earned a trusted reputation in personal transportation across the vibrant city of Paris. As a leading service provider,
+                         we go beyond simple travel—offering seamless journeys throughout Paris, its picturesque suburbs, and all three major airports in the region.</p>
+
+                      <h2>Our Core Competence</h2>
+                    <p>Our growth has been shaped by an unwavering dedication to quality and a refined understanding of our clients’ needs. With extensive experience in passenger transport throughout Île-de-France and strong insights into tourism, 
+                        we ensure purposeful and seamless travel. By special arrangement, we also offer personalized city tours that reveal the most captivating sides of Paris.</p>   
+
+                        <h2>Collaborative Ventures</h2>
+                    <p>We are proud to be a preferred partner for numerous global travel agencies and corporate organizations. 
+                        Their confidence in our service highlights our reputation for delivering dependable, high-quality transportation tailored to professional needs.</p>   
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-image"></div>
+                </div>
+            </div>
+
+            <!-- Detailed About Section -->
+           
+        </div>
+    </section>
+
+    <!-- Additional Info Section -->
+    <section style="background: var(--light-gray); padding: 80px 20px;">
+        <div class="container">
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-5 mb-4 mb-lg-0">
+  <div class="driver-image" style="height:500px;"></div>
+</div>
+
+                <div class="col-lg-7">
+                    <h2 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 2rem; color: var(--dark-bg);">Dedicated Team of Drivers</h2>
+                    <p style="font-size: 1.05rem; line-height: 1.8; color: #333; margin-bottom: 3rem;">At the heart of our service is a team of highly qualified, VTC-licensed independent drivers. Their professionalism, city expertise, and commitment to excellence allow us to deliver a premium travel experience throughout Paris.</p>
+                    
+                    <h2 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 2rem; color: var(--dark-bg);">Accessibility and Support</h2>
+                    <p style="font-size: 1.05rem; line-height: 1.8; color: #333; margin-bottom: 3rem;">Your convenience is our priority. Our team remains available during office hours for phone and email support, and for added peace of mind, we offer a dedicated 24/7 emergency hotline—ensuring help is always just a call away while you are in Paris.</p>
+                    
+                    <h2 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 2rem; color: var(--dark-bg);">Our Fleet: Comfort and Eco-Friendly Options</h2>
+                    <p style="font-size: 1.05rem; line-height: 1.8; color: #333;">Our smoke-free fleet reflects our dedication to comfort, safety, and quality. Spacious 8-seater vehicles ensure a relaxing journey, while our premium 7-seater Mercedes models provide a more luxurious travel experience when available. For smaller groups, we offer refined 4-seater hybrid vehicles that blend comfort with sustainable mobility.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Navbar background on scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.background = 'rgba(0, 0, 0, 0.95)';
+            } else {
+                navbar.style.background = 'rgba(0, 0, 0, 0.9)';
+            }
+        });
+    </script>
+    <div id="map"></div>
+    <div id="footer"></div>
+    <script>
+        // load navbar
+        fetch("navbar.html")
+            .then(res => res.text())
+            .then(data => document.getElementById("navbar").innerHTML = data);
+
+        // load footer
+        fetch("footer.html")
+            .then(res => res.text())
+            .then(data => document.getElementById("footer").innerHTML = data);
+    </script>
+    <!--contact-->
+        <div class="cont-icon">
+                <div class="blue-van-contact-icons" id="btn-contact">
+                    <a href="tel:+33123456789" class="blue-van-contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </a>
+                    <a href="https://wa.me/33123456789" target="_blank" class="blue-van-contact-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="mailto:contact@bluevanparis.com" class="blue-van-contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+            </div>
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    const contactIcons = document.getElementById('btn-contact');
+
+                    if (contactIcons) {
+
+                        // Show / hide based on scroll position
+                        window.addEventListener('scroll', function () {
+                            if (window.pageYOffset > 300) {
+                                contactIcons.style.display = 'flex';
+                            } else {
+                                contactIcons.style.display = 'none';
+                            }
+                        });
+
+                        // Hide initially if at top
+                        if (window.pageYOffset <= 300) {
+                            contactIcons.style.display = 'none';
+                        }
+                    }
+                });
+            </script>
+        </div>
+    <a href="#top" class="blue-van-plane-icon" id="backToTop">
+        <i class="fa-solid fa-plane-up"></i>
+    </a>
+        <script>
+            // Back to top functionality
+            document.addEventListener('DOMContentLoaded', function() {
+                const backToTop = document.getElementById('backToTop');
+                
+                if (backToTop) {
+                    // Smooth scroll to top on click
+                    backToTop.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        window.scrollTo({
+                            top: 0,
+                            behavior: 'smooth'
+                        });
+                    });
+                    
+                    // Show/hide button based on scroll position
+                    window.addEventListener('scroll', function() {
+                        if (window.pageYOffset > 300) {
+                            backToTop.style.display = 'flex';
+                        } else {
+                            backToTop.style.display = 'none';
+                        }
+                    });
+                    
+                    // Hide initially if at top
+                    if (window.pageYOffset <= 300) {
+                        backToTop.style.display = 'none';
+                    }
+                }
+            });
+        </script>
+</body>
+</html>

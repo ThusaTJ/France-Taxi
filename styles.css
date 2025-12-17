@@ -1,0 +1,1896 @@
+:root{
+    --primary-color: #000000 !important;
+    --secondary-color: #FFFFFF !important;
+    --font-color: #D1AE6C !important;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+}
+
+/* ========================================== */
+/* BASE STYLES */
+/* ========================================== */
+
+.navbar {
+    height: 130px;
+    color: var(--font-color);
+    width: 100%;
+    border-bottom:1px solid var(--font-color);
+}
+
+.navbar .navbar-nav .nav-link{
+    color: var(--font-color) !important;
+}
+
+.navbar-brand img{
+    height: 80px;
+    width: 350px;
+}
+
+.navbar, 
+.navbar .nav-link, 
+.navbar .btn, 
+.navbar .dropdown-toggle {
+    font-size: 19px !important;          
+    color: var(--font-color);
+    margin-right: 12px; 
+    font-weight: bold;
+    z-index: 1000;
+}
+.book-btn:hover{
+    background-color: var(--secondary-color) !important;
+    color: black;
+}
+.navbar,
+.navbar .nav-link:hover{
+    color: var(--secondary-color);
+}
+
+.navbar .btn:hover{
+    color: var(--secondary-color);
+}
+
+.navbar .dropdown-item:hover {
+    background-color:none;
+    color: var(--font-color);
+}
+
+.navbar .dropdown-toggle:focus,
+.navbar .dropdown-toggle:active,
+.navbar .dropdown-toggle.show {
+    color: var(--navbar-text);
+    text-decoration: none;
+    box-shadow: none;
+}
+
+.bg-container {
+    background-image: url('img/hero2.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 1;
+}
+
+.bg-content {
+    text-align: center;
+    color: var(--secondary-color);
+    z-index: 2;
+    padding: 0 20px;
+}
+
+.bg-content h1 {
+    font-size: 65px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.bg-content h1 span {
+    color: #D1AE6C;
+    display: block;
+    text-indent: -520px;
+}
+
+.message-bar {
+    width: 100%;
+    background-color: #D1AE6C;
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 15px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-container{
+    padding: 60px 20px;
+    background-color:rgb(44 37 35);
+    color: var(--secondary-color);
+    font-size: 25px;
+    width: 100%;  
+    height: auto;
+}
+
+.about-container h2, .transfer-container h2{
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--font-color);
+    font-size: 60px;
+}
+
+.our-fleets-container h2{
+    font-size: 50px;
+    font-weight: 700;
+    color: #000;
+}
+
+.about-container .btn{
+    background-color:var(--secondary-color);
+    color: black;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.about-container .btn:hover{
+    background-color: #D1AE6C;
+    color: black;
+}
+
+.container-fleets{
+    background: rgba(209, 174, 108, 0.3);
+    width: 100%;
+    height: 100%;
+    margin-top: 0 !important;
+}
+
+.our-fleets-container {
+    padding-top: 30px !important;
+    background:rgba(255,255,255,0.1);
+    width: 100%;
+    margin-top: 0 !important;
+}
+
+.fleet-card {
+    background: rgba(255,255,255,0.1);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto 20px auto;
+}
+
+.fleet-card:last-child {
+    margin-right: 0;
+}
+
+.fleet-card:first-child {
+    margin-left: 0;
+}
+        
+.fleet-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    background: var(--secondary-color);
+}
+        
+.vehicle-image {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+        
+.vehicle-name {
+    color: #4c4c4c;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+        
+.vehicle-type {
+    font-size: 30px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 25px;
+}
+        
+.spec-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 20px;
+    color: #333;
+    flex-wrap: wrap;
+}
+        
+.spec-item i {
+    width: 20px;
+    margin-right: 8px;
+    color: #666;
+}
+
+.end-fleets .btn{
+    background-color:var(--primary-color);
+    color: var(--secondary-color);
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.end-fleets .btn:hover{
+    background-color: #D1AE6C;
+    color: black;
+}
+
+.end-fleets p{
+    font-size: 22px;
+    font-weight: 500;
+    color: rgb(44 37 35);
+}
+
+.transfer-container{
+    padding: 60px 20px;
+    background-color:rgb(44 37 35);
+    color: var(--secondary-color);
+    font-size: 24px;
+    width: 100%;
+}     
+
+.transfer-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.transfer-container .transfer-card{
+    background: rgba(255,255,255,0.1);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    color: var(--secondary-color);
+    width: 100%;
+    max-width: 500px;
+    flex: 1 1 300px;
+}
+
+.transfer-card .list-transfer li{
+    font-size: 21px;
+    color: var(--secondary-color);
+    background-color: transparent;
+    border: none;
+}
+
+.transfer-card p{
+    font-size: 21px;
+    color: var(--secondary-color);
+}
+
+.transfer-icon{
+    font-size: 45px;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.2);
+    width: 85px;
+    height: 85px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.end-transfers .btn{
+    background-color:var(--secondary-color);
+    color: black;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.end-transfers .btn:hover{
+    background-color: #D1AE6C;
+    color: black;
+}
+
+.why-choose-container {
+    width: 100%;
+    height: auto;
+    font-size: 23px;
+    padding: 60px 20px;
+    background: rgba(209, 174, 108, 0.3);
+}
+
+.why-choose-container h2 {
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.why-choose-container p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: rgb(44 37 35);
+}
+
+.why-choose-container li {
+    margin-bottom: 11px;
+    padding-left: 10px;
+    list-style: none;
+    border: none;
+    background: transparent;
+}
+
+.why-choose-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.privileges-cards-container{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.privileges-cards-container .card {
+    background: rgba(255,255,255,0.1);
+    color: var(--secondary-color);
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    font-size: 20px;
+    padding: 30px;
+    flex: 1 1 300px;
+}
+
+.privileges-cards-container .card p{
+    margin-top: 20px;
+}
+
+.privileges-cards-container i{
+    font-size: 65px;
+}
+
+.carousel-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 50px;
+}
+
+.carousel-track {
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    min-width: calc(33.333% - 20px);
+    margin: 0 10px;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    flex-shrink: 0;
+}
+
+.slide-images {
+    width: 100%;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+}
+
+.slide-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide-image.active {
+    opacity: 1;
+}
+
+.slide-content {
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.slide-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+.book-btn {
+    background: #000;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.3s;
+    white-space: nowrap;
+}
+
+.book-btn:hover {
+    background: #333;
+}
+
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 200, 100, 0.9);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transition: background 0.3s;
+}
+
+.nav-btn:hover {
+    background: rgba(255, 180, 80, 1);
+}
+
+.nav-btn.prev {
+    left: -25px;
+}
+
+.nav-btn.next {
+    right: -25px;
+}
+
+.our-service-container h2{
+    font-size: 60px;
+    font-weight: 700;
+    margin-top: 50px;
+    margin-bottom: 30px !important;
+}
+
+.our-service-container p{
+    font-size: 22px;
+    color: rgb(44 37 35);
+    margin-bottom: 60px;
+}
+
+.our-service-container h4 {
+    font-size: 24px;
+}
+
+.blue-van-reviews {
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    padding: 60px 0;
+}
+
+.blue-van-reviews .header {
+    text-align: center;
+    padding: 0 20px 40px;
+}
+
+.blue-van-reviews .header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.blue-van-reviews .tripadvisor-badge {
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    background: #34e0a1;
+    color: #000;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+.blue-van-reviews .tripadvisor-logo {
+    width: 30px;
+    height: 30px;
+    background: #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #34e0a1;
+}
+
+.blue-van-reviews .review-card {
+    background: linear-gradient(135deg, #4a4a4a 0%, #3a3a3a 100%);
+    border-radius: 15px;
+    padding: 30px;
+    margin: 20px;
+    min-height: 350px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.blue-van-reviews .review-card:hover {
+    transform: translateY(-5px);
+}
+
+.blue-van-reviews .reviewer-name {
+    color: #fdb913;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.blue-van-reviews .contributions {
+    color: #ccc;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.blue-van-reviews .review-text {
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.blue-van-reviews .stars {
+    color: #fdb913;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.blue-van-reviews .review-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    margin-right: 10px;
+}
+
+.blue-van-reviews .review-date {
+    color: #999;
+    font-size: 0.85rem;
+}
+
+.blue-van-reviews .carousel-control-prev,
+.blue-van-reviews .carousel-control-next {
+    width: 60px;
+    height: 60px;
+    background: #fdb913;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 1;
+}
+
+.blue-van-reviews .carousel-control-prev {
+    left: -30px;
+}
+
+.blue-van-reviews .carousel-control-next {
+    right: -30px;
+}
+
+.blue-van-reviews .carousel-control-prev-icon,
+.blue-van-reviews .carousel-control-next-icon {
+    filter: invert(1);
+}
+
+.blue-van-contact-icons {
+    position: fixed;
+    left: 20px;
+    top: 85%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 1000;
+}
+
+.blue-van-contact-icon {
+    width: 70px;
+    height: 70px;
+    background: #000000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.6rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    border: 2px solid var(--font-color);
+}
+
+.blue-van-contact-icon:hover {
+    background: #fdb913;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.blue-van-plane-icon {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 70px;
+    height: 70px;
+    background: #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    text-decoration: none;
+    border: 2px solid var(--font-color);
+}
+
+.blue-van-plane-icon:hover {
+    background: #fdb913;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+/* ========================================== */
+/* RESPONSIVE MEDIA QUERIES */
+/* ========================================== */
+
+/* Mobile (xs - Extra Small) - 0 to 575px */
+@media (max-width: 575px) { 
+    /* Navbar */
+    .navbar {
+        height: auto !important;
+        padding: 10px 0 !important;
+    }
+    
+    .navbar .navbar-brand img {
+        width: 150px !important;
+        height: auto !important;
+    }
+    
+    .navbar .nav-link, .navbar .btn, .navbar .dropdown-toggle {
+        font-size: 15px !important;
+        margin-right: 0 !important;
+        padding: 8px 12px !important;
+    }
+    
+    .navbar a[href="/booknow"].btn {
+        font-size: 13px !important;
+        padding: 8px 15px !important;
+        border-radius: 10px !important;
+        margin-top: 10px;
+        width: 100%;
+    }
+    
+    .navbar .navbar-collapse {
+        margin-top: 15px;
+    }
+    
+    .navbar-nav {
+        margin: 0 !important;
+        width: 100%;
+    }
+    
+    .navbar .nav-item {
+        width: 100%;
+        text-align: left;
+    }
+    
+    .navbar .d-flex {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        width: 100%;
+        gap: 10px !important;
+    }
+    
+    .navbar .dropdown {
+        width: 100%;
+    }
+    
+    .navbar .dropdown button {
+        width: 100%;
+        text-align: left;
+    }
+    
+    /* Hero Section */
+    .bg-container {
+        background-attachment: scroll;
+        height: 70vh;
+        min-height: 500px;
+    }
+    
+    .bg-content {
+        padding: 0 15px;
+    }
+    
+    .bg-content h1 {
+        font-size: 22px !important;
+        line-height: 1.4;
+    }
+    
+    .bg-content h1 span {
+        text-indent: 0 !important;
+        margin-top: 10px;
+        font-size: 22px;
+    }
+    
+    /* Message Bar */
+    .message-bar {
+        font-size: 13px;
+        padding: 10px 5px;
+    }
+    
+    /* About Section */
+    .about-container {
+        padding: 30px 15px;
+        font-size: 15px;
+    }
+    
+    .about-container .abt-container {
+        width: 100% !important;
+    }
+    
+    .about-container h2, .transfer-container h2 {
+        font-size: 26px !important;
+        margin-bottom: 15px;
+    }
+    
+    .about-container p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+    
+    .about-container .btn {
+        font-size: 13px;
+        padding: 8px 16px;
+        margin: 5px;
+    }
+    
+    /* Fleet Section */
+    .container-fleets {
+        padding: 20px 10px;
+    }
+    
+    .our-fleets-container {
+        padding: 20px 10px !important;
+    }
+    
+    .our-fleets-container h2 {
+        font-size: 26px !important;
+        margin-bottom: 20px;
+    }
+    
+    .fleet-card {
+        padding: 20px;
+        margin: 0 auto 20px auto;
+        max-width: 100%;
+    }
+    
+    .vehicle-image {
+        height: 150px;
+    }
+    
+    .vehicle-name {
+        font-size: 15px;
+    }
+    
+    .vehicle-type {
+        font-size: 20px !important;
+        margin-bottom: 15px;
+    }
+    
+    .spec-item {
+        font-size: 14px !important;
+        margin-bottom: 8px;
+    }
+    
+    .spec-item i {
+        width: 18px;
+        font-size: 14px;
+    }
+    
+    .end-fleets p {
+        font-size: 13px !important;
+        padding: 0 10px;
+    }
+    
+    .end-fleets .btn {
+        font-size: 13px;
+        padding: 8px 16px;
+    }
+    
+    /* Transfer Section */
+    .transfer-container {
+        padding: 30px 15px;
+        font-size: 14px;
+    }
+    
+    .transfer-cards-container {
+        gap: 15px;
+    }
+    
+    .transfer-container .transfer-card {
+        max-width: 100%;
+        padding: 15px;
+    }
+    
+    .transfer-card h3 {
+        font-size: 18px;
+    }
+    
+    .transfer-card p {
+        font-size: 14px !important;
+        line-height: 1.5;
+    }
+    
+    .transfer-card .list-transfer li {
+        font-size: 13px !important;
+        margin-bottom: 8px;
+    }
+    
+    .transfer-icon {
+        font-size: 35px !important;
+        width: 60px !important;
+        height: 60px !important;
+        margin-left: 0;
+    }
+    
+    .end-transfers p {
+        font-size: 13px !important;
+        padding: 0 10px;
+    }
+    
+    .end-transfers .btn {
+        font-size: 13px;
+        padding: 8px 16px;
+    }
+    
+    /* Why Choose Section */
+    .why-choose-container {
+        padding: 30px 15px;
+        font-size: 14px;
+    }
+    
+    .why-choose-container h2 {
+        font-size: 26px !important;
+        margin-bottom: 15px;
+    }
+    
+    .why-choose-container p {
+        font-size: 13px !important;
+        line-height: 1.5;
+    }
+    
+    .why-choose-container .row {
+        flex-direction: column-reverse;
+    }
+    
+    .why-choose-container img {
+        width: 100% !important;
+        margin-bottom: 20px;
+    }
+    
+    .why-choose-container .d-flex {
+        flex-direction: column !important;
+    }
+    
+    .why-choose-container li {
+        font-size: 13px;
+        margin-bottom: 8px;
+    }
+    
+    /* Privileges Section */
+    .privileges-cards-container {
+        gap: 15px;
+    }
+    
+    .privileges-cards-container .card {
+        width: 100% !important;
+        padding: 20px;
+        font-size: 14px;
+        margin-bottom: 0;
+    }
+    
+    .privileges-cards-container .card h5 {
+        font-size: 16px;
+    }
+    
+    .privileges-cards-container .card p {
+        font-size: 13px;
+        margin-top: 10px;
+    }
+    
+    .privileges-cards-container i {
+        font-size: 40px !important;
+    }
+    
+    /* Carousel */
+    .carousel-container {
+        padding: 0 10px;
+        max-width: 100%;
+    }
+    
+    .carousel-slide {
+        min-width: calc(100% - 10px) !important;
+        margin: 0 5px;
+    }
+    
+    .slide-images {
+        height: 180px;
+    }
+    
+    .slide-content {
+        padding: 15px;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .slide-title {
+        font-size: 14px !important;
+        margin-bottom: 10px;
+    }
+    
+    .slide-content .book-btn {
+        padding: 8px 16px;
+        font-size: 11px;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .nav-btn {
+        width: 30px !important;
+        height: 30px !important;
+        font-size: 16px !important;
+    }
+    
+    .nav-btn.prev {
+        left: 0 !important;
+    }
+    
+    .nav-btn.next {
+        right: 0 !important;
+    }
+    
+    /* Service Locations */
+    .our-service-container {
+        padding: 20px 15px;
+    }
+    
+    .our-service-container h2 {
+        font-size: 26px !important;
+        margin-top: 20px !important;
+        margin-bottom: 15px !important;
+    }
+    
+    .our-service-container p {
+        font-size: 13px !important;
+        margin-bottom: 30px !important;
+        padding: 0 10px;
+    }
+    
+    .our-service-container h4 {
+        font-size: 15px !important;
+        padding: 0 10px;
+    }
+    
+    /* Reviews */
+    .blue-van-reviews {
+        padding: 30px 0;
+    }
+    
+    .blue-van-reviews .header {
+        padding: 0 15px 30px;
+    }
+    
+    .blue-van-reviews .header h1 {
+        font-size: 1.3rem !important;
+    }
+    
+    .blue-van-reviews .tripadvisor-badge {
+        font-size: 11px;
+        padding: 6px 12px;
+        gap: 5px;
+    }
+    
+    .blue-van-reviews .tripadvisor-logo {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .blue-van-reviews .review-card {
+        margin: 10px 5px;
+        padding: 15px;
+        min-height: auto !important;
+    }
+    
+    .blue-van-reviews .reviewer-name {
+        font-size: 1rem !important;
+    }
+    
+    .blue-van-reviews .contributions {
+        font-size: 0.75rem;
+    }
+    
+    .blue-van-reviews .review-text {
+        font-size: 0.85rem;
+        line-height: 1.5;
+    }
+    
+    .blue-van-reviews .stars {
+        font-size: 1rem;
+    }
+    
+    .blue-van-reviews .review-badge {
+        font-size: 0.7rem;
+        padding: 3px 10px;
+    }
+    
+    .blue-van-reviews .review-date {
+        font-size: 0.7rem;
+    }
+    
+    .blue-van-reviews .carousel-control-prev,
+    .blue-van-reviews .carousel-control-next {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .blue-van-reviews .carousel-control-prev {
+        left: -15px;
+    }
+    
+    .blue-van-reviews .carousel-control-next {
+        right: -15px;
+    }
+    
+    /* Contact Icons */
+    .blue-van-contact-icons {
+        left: 5px;
+        gap: 8px;
+    }
+    
+    .blue-van-contact-icon {
+        width: 38px !important;
+        height: 38px !important;
+        font-size: 0.95rem !important;
+    }
+    
+    .blue-van-plane-icon {
+        width: 42px !important;
+        height: 42px !important;
+        font-size: 1.1rem !important;
+        right: 10px !important;
+        bottom: 10px !important;
+    }
+}
+
+/* ========================================== */
+/* MOBILE RESPONSIVE CSS (0-575px) */
+/* ========================================== */
+
+@media (max-width: 575px) { 
+    /* NAVBAR */
+    .navbar {
+        height: auto !important;
+        padding: 10px 0 !important;
+    }
+    
+    .navbar .navbar-brand img {
+        width: 200px !important;
+        height: auto !important;
+    }
+
+    .navbar .nav-link, 
+    .navbar .btn, 
+    .navbar .dropdown-toggle {
+        font-size: 15px !important;
+        margin-right: 0 !important;
+        padding: 8px 12px !important;
+        z-index: 1000;
+    }
+    
+    .navbar a[href="/booknow"].btn {
+        font-size: 13px !important;
+        padding: 8px 15px !important;
+        border-radius: 10px !important;
+        margin-top: 10px;
+        width: 100%;
+        z-index: 1;
+    }
+    
+    .navbar .navbar-collapse {
+        margin-top: 15px;
+    }
+    
+    .navbar-nav {
+        margin: 0 !important;
+        width: 100%;
+    }
+    
+    .navbar .nav-item {
+        width: 100%;
+        text-align: left;
+    }
+    
+    .navbar .d-flex {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        width: 100%;
+        gap: 8px !important;
+    }
+    
+    .navbar .dropdown {
+        width: 100%;
+    }
+    
+    .navbar .dropdown button {
+        width: 100%;
+        text-align: left;
+    }
+    
+    /* HERO SECTION */
+    .bg-container {
+        background-attachment: scroll !important;
+        height: 70vh !important;
+        min-height: 500px !important;
+    }
+    
+    .bg-content {
+        padding: 0 15px !important;
+    }
+    
+    .bg-content h1 {
+        font-size: 22px !important;
+        line-height: 1.4 !important;
+    }
+    
+    .bg-content h1 span {
+        text-indent: 0 !important;
+        margin-top: 10px !important;
+        font-size: 22px !important;
+    }
+    
+    /* MESSAGE BAR */
+    .message-bar {
+        font-size: 13px !important;
+        padding: 10px 5px !important;
+    }
+    
+    /* ABOUT SECTION */
+    .about-container {
+        padding: 30px 15px !important;
+        font-size: 15px !important;
+    }
+    
+    .about-container .abt-container {
+        width: 100% !important;
+    }
+    
+    .about-container h2, 
+    .transfer-container h2 {
+        font-size: 26px !important;
+        margin-bottom: 15px !important;
+    }
+    
+    .about-container p {
+        font-size: 14px !important;
+        line-height: 1.6 !important;
+    }
+    
+    .about-container .btn {
+        font-size: 13px !important;
+        padding: 8px 16px !important;
+        margin: 5px !important;
+    }
+    
+    /* FLEET SECTION */
+    .container-fleets {
+        padding: 20px 10px !important;
+    }
+    
+    .our-fleets-container {
+        padding: 20px 10px !important;
+    }
+    
+    .our-fleets-container h2 {
+        font-size: 26px !important;
+        margin-bottom: 20px !important;
+    }
+    
+    .our-fleets-container .row {
+        padding: 20px 10px !important;
+    }
+    
+    .fleet-card {
+        padding: 20px !important;
+        margin: 0 auto 20px auto !important;
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+    
+    .fleet-card:first-child,
+    .fleet-card:last-child {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    
+    .vehicle-image {
+        height: 150px !important;
+    }
+    
+    .vehicle-name {
+        font-size: 15px !important;
+    }
+    
+    .vehicle-type {
+        font-size: 20px !important;
+        margin-bottom: 15px !important;
+    }
+    
+    .spec-item {
+        font-size: 14px !important;
+        margin-bottom: 8px !important;
+    }
+    
+    .spec-item i {
+        width: 18px !important;
+        font-size: 14px !important;
+    }
+    
+    .end-fleets p {
+        font-size: 13px !important;
+        padding: 0 10px !important;
+    }
+    
+    .end-fleets .btn {
+        font-size: 13px !important;
+        padding: 8px 16px !important;
+    }
+    
+    /* TRANSFER SECTION */
+    .transfer-container {
+        padding: 30px 15px !important;
+        font-size: 14px !important;
+    }
+    
+    .transfer-cards-container {
+        gap: 15px !important;
+        flex-direction: column !important;
+    }
+    
+    .transfer-container .transfer-card {
+        max-width: 100% !important;
+        width: 100% !important;
+        padding: 15px !important;
+        margin-bottom: 15px !important;
+    }
+    
+    .transfer-card h3 {
+        font-size: 18px !important;
+    }
+    
+    .transfer-card p {
+        font-size: 14px !important;
+        line-height: 1.5 !important;
+    }
+    
+    .transfer-card .list-transfer li {
+        font-size: 13px !important;
+        margin-bottom: 8px !important;
+    }
+    
+    .transfer-icon {
+        font-size: 35px !important;
+        width: 60px !important;
+        height: 60px !important;
+        margin-left: 0 !important;
+    }
+    
+    .end-transfers p {
+        font-size: 13px !important;
+        padding: 0 10px !important;
+    }
+    
+    .end-transfers .btn {
+        font-size: 13px !important;
+        padding: 8px 16px !important;
+    }
+    
+    /* WHY CHOOSE SECTION */
+    .why-choose-container {
+        padding: 30px 15px !important;
+        font-size: 14px !important;
+    }
+    
+    .why-choose-container h2 {
+        font-size: 26px !important;
+        margin-bottom: 15px !important;
+    }
+    
+    .why-choose-container p {
+        font-size: 13px !important;
+        line-height: 1.5 !important;
+    }
+    
+    .why-choose-container .row {
+        flex-direction: column-reverse !important;
+    }
+    
+    .why-choose-container img {
+        width: 100% !important;
+        margin-bottom: 20px !important;
+    }
+    
+    .why-choose-container .d-flex {
+        flex-direction: column !important;
+    }
+    
+    .why-choose-container li {
+        font-size: 13px !important;
+        margin-bottom: 8px !important;
+    }
+    
+    .why-choose-container .list-why-choose {
+        width: 100% !important;
+    }
+    
+    /* PRIVILEGES SECTION */
+    .privileges-cards-container {
+        gap: 15px !important;
+    }
+    
+    .privileges-cards-container .card {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 20px !important;
+        font-size: 14px !important;
+        margin-bottom: 0 !important;
+        flex: 1 1 100% !important;
+    }
+    
+    .privileges-cards-container .card h5 {
+        font-size: 16px !important;
+    }
+    
+    .privileges-cards-container .card p {
+        font-size: 13px !important;
+        margin-top: 10px !important;
+    }
+    
+    .privileges-cards-container i {
+        font-size: 40px !important;
+    }
+    
+    .privileges-cards-container .row {
+        gap: 15px !important;
+    }
+    
+    /* CAROUSEL SECTION */
+    .carousel-container {
+        padding: 0 10px !important;
+        max-width: 100% !important;
+    }
+    
+    .carousel-slide {
+        min-width: calc(100% - 10px) !important;
+        margin: 0 5px !important;
+    }
+    
+    .slide-images {
+        height: 180px !important;
+    }
+    
+    .slide-content {
+        padding: 15px !important;
+        flex-direction: column !important;
+        text-align: center !important;
+    }
+    
+    .slide-title {
+        font-size: 14px !important;
+        margin-bottom: 10px !important;
+    }
+    
+    .slide-content .book-btn {
+        padding: 8px 16px !important;
+        font-size: 11px !important;
+        width: 100% !important;
+        justify-content: center !important;
+    }
+    
+    .nav-btn {
+        width: 30px !important;
+        height: 30px !important;
+        font-size: 16px !important;
+    }
+    
+    .nav-btn.prev {
+        left: 0 !important;
+    }
+    
+    .nav-btn.next {
+        right: 0 !important;
+    }
+    
+    /* SERVICE LOCATIONS */
+    .our-service-container {
+        padding: 20px 15px !important;
+    }
+    
+    .our-service-container h2 {
+        font-size: 26px !important;
+        margin-top: 20px !important;
+        margin-bottom: 15px !important;
+    }
+    
+    .our-service-container p {
+        font-size: 13px !important;
+        margin-bottom: 30px !important;
+        padding: 0 10px !important;
+    }
+    
+    .our-service-container h4 {
+        font-size: 15px !important;
+        padding: 0 10px !important;
+    }
+    
+    /* REVIEWS SECTION */
+    .blue-van-reviews {
+        padding: 30px 0 !important;
+    }
+    
+    .blue-van-reviews .header {
+        padding: 0 15px 30px !important;
+    }
+    
+    .blue-van-reviews .header h1 {
+        font-size: 1.3rem !important;
+    }
+    
+    .blue-van-reviews .tripadvisor-badge {
+        font-size: 11px !important;
+        padding: 6px 12px !important;
+        gap: 5px !important;
+    }
+    
+    .blue-van-reviews .tripadvisor-logo {
+        width: 24px !important;
+        height: 24px !important;
+    }
+    
+    .blue-van-reviews .review-card {
+        margin: 10px 5px !important;
+        padding: 15px !important;
+        min-height: auto !important;
+    }
+    
+    .blue-van-reviews .reviewer-name {
+        font-size: 1rem !important;
+    }
+    
+    .blue-van-reviews .contributions {
+        font-size: 0.75rem !important;
+    }
+    
+    .blue-van-reviews .review-text {
+        font-size: 0.85rem !important;
+        line-height: 1.5 !important;
+    }
+    
+    .blue-van-reviews .stars {
+        font-size: 1rem !important;
+    }
+    
+    .blue-van-reviews .review-badge {
+        font-size: 0.7rem !important;
+        padding: 3px 10px !important;
+    }
+    
+    .blue-van-reviews .review-date {
+        font-size: 0.7rem !important;
+    }
+    
+    .blue-van-reviews .carousel-control-prev,
+    .blue-van-reviews .carousel-control-next {
+        width: 35px !important;
+        height: 35px !important;
+    }
+    
+    .blue-van-reviews .carousel-control-prev {
+        left: -15px !important;
+    }
+    
+    .blue-van-reviews .carousel-control-next {
+        right: -15px !important;
+    }
+    
+    /* CONTACT ICONS */
+    .blue-van-contact-icons {
+        left: 5px !important;
+        gap: 8px !important;
+    }
+    
+    .blue-van-contact-icon {
+        width: 38px !important;
+        height: 38px !important;
+        font-size: 0.95rem !important;
+    }
+    
+    /* BACK TO TOP ICON */
+    .blue-van-plane-icon {
+        width: 42px !important;
+        height: 42px !important;
+        font-size: 1.1rem !important;
+        right: 10px !important;
+        bottom: 10px !important;
+    }
+    
+    /* GENERAL MOBILE ADJUSTMENTS */
+    .container-fluid {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+    
+    .row {
+        margin-left: -10px !important;
+        margin-right: -10px !important;
+    }
+    
+    .col, .col-lg-4, .col-md-6 {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+    
+    /* ENSURE NO HORIZONTAL SCROLL */
+    body {
+        overflow-x: hidden !important;
+    }
+    
+    img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+}
+
+/* Small devices (sm) - 576px to 767px */
+@media (min-width: 576px) and (max-width: 767px) {
+    .navbar {
+        height: auto !important;
+        padding: 12px 0 !important;
+    }
+    
+    .navbar .navbar-brand img {
+        width: 250px !important;
+    }
+    
+    .navbar .nav-link, .navbar .btn, .navbar .dropdown-toggle {
+        font-size: 16px !important;
+    }
+    
+    .navbar a[href="/booknow"].btn {
+        font-size: 14px !important;
+        padding: 10px 18px !important;
+    }
+    
+    .bg-container {
+        background-attachment: scroll;
+    }
+    
+    .bg-content h1 {
+        font-size: 30px !important;
+    }
+    
+    .bg-content h1 span {
+        text-indent: 0 !important;
+    }
+    
+    .message-bar {
+        font-size: 16px;
+    }
+    
+    .about-container h2, .transfer-container h2 {
+        font-size: 34px !important;
+    }
+    
+    .our-fleets-container h2 {
+        font-size: 34px !important;
+    }
+    
+    .carousel-slide {
+        min-width: calc(100% - 20px) !important;
+    }
+    
+    .our-service-container h2 {
+        font-size: 34px !important;
+    }
+    
+    .why-choose-container h2 {
+        font-size: 34px !important;
+    }
+    
+    .fleet-card {
+        max-width: 480px;
+    }
+}
+
+/* Tablets (md) - 768px to 991px */
+@media (min-width: 768px) and (max-width: 991px) {
+    .navbar {
+        height: auto !important;
+        padding: 15px 0 !important;
+    }
+    
+    .navbar .navbar-brand img {
+        width: 240px !important;
+    }
+    
+    .navbar .nav-link, .navbar .btn, .navbar .dropdown-toggle {
+        font-size: 17px !important;
+        margin-right: 8px !important;
+    }
+    
+    .navbar a[href="/booknow"].btn {
+        font-size: 15px !important;
+        padding: 11px 20px !important;
+    }
+    
+    .bg-content h1 {
+        font-size: 38px !important;
+    }
+    
+    .bg-content h1 span {
+        text-indent: -200px !important;
+    }
+    
+    .message-bar {
+        font-size: 18px;
+    }
+    
+    .about-container {
+        font-size: 18px;
+    }
+    
+    .about-container h2, .transfer-container h2 {
+        font-size: 42px !important;
+    }
+    
+    .our-fleets-container h2 {
+        font-size: 42px !important;
+    }
+    
+    .carousel-slide {
+        min-width: calc(50% - 20px) !important;
+    }
+    
+    .transfer-container .transfer-card {
+        max-width: 48%;
+    }
+    
+    .our-service-container h2 {
+        font-size: 42px !important;
+    }
+    
+    .why-choose-container h2 {
+        font-size: 42px !important;
+    }
+    
+    .privileges-cards-container .card {
+        max-width: 48%;
+    }
+    
+    .slide-content .book-btn {
+        padding: 12px 25px;
+        font-size: 13px;
+    }
+}
+
+/* Laptops (lg) - 992px to 1199px */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .navbar {
+        height: 110px !important;
+    }
+    
+    .navbar .navbar-brand img {
+        width: 280px !important;
+    }
+    
+    .navbar .nav-link, .navbar .btn, .navbar .dropdown-toggle {
+        font-size: 19px !important;
+        margin-right: 8px !important;
+    }
+    
+    .navbar a[href="/booknow"].btn {
+        font-size: 16px !important;
+        padding: 12px 22px !important;
+    }
+    
+    .bg-content h1 {
+        font-size: 48px !important;
+    }
+    
+    .bg-content h1 span {
+        text-indent: -350px !important;
+    }
+    
+    .message-bar {
+        font-size: 20px;
+    }
+    
+    .about-container {
+        font-size: 20px;
+    }
+    
+    .about-container h2, .transfer-container h2 {
+        font-size: 50px !important;
+    }
+    
+    .our-fleets-container h2 {
+        font-size: 46px !important;
+    }
+    
+    .fleet-card {
+        max-width: 420px;
+    }
+    
+    .our-service-container h2 {
+        font-size: 50px !important;
+    }
+    
+    .why-choose-container h2 {
+        font-size: 46px !important;
+    }
+    
+    .carousel-slide {
+        min-width: calc(33.333% - 20px) !important;
+    }
+}
+
+/* Desktops (xl) - 1200px to 1399px */
+@media (min-width: 1200px) and (max-width: 1399px) {
+    .navbar {
+        height: 120px !important;
+    }
+    
+    .navbar .navbar-brand img {
+        width: 310px !important;
+    }
+    
+    .navbar .nav-link, .navbar .btn, .navbar .dropdown-toggle {
+        font-size: 21px !important;
+        margin-right: 10px !important;
+    }
+    
+    .navbar a[href="/booknow"].btn {
+        font-size: 17px !important;
+        padding: 13px 25px !important;
+    }
+    
+    .bg-content h1 {
+        font-size: 56px !important;
+    }
+    
+    .bg-content h1 span {
+        text-indent: -420px !important;
+    }
+    
+    .message-bar {
+        font-size: 22px;
+    }
+    
+    .about-container {
+        font-size: 22px;
+    }
+    
+    .about-container h2, .transfer-container h2 {
+        font-size: 55px !important;
+    }
+    
+    .our-fleets-container h2 {
+        font-size: 48px !important;
+    }
+    
+    .our-service-container h2 {
+        font-size: 55px !important;
+    }
+    
+    .why-choose-container h2 {
+        font-size: 48px !important;
+    }
+    
+    .carousel-slide {
+        min-width: calc(33.333% - 20px) !important;
+    }
+    
+    .fleet-card:last-child {
+        margin-left: 0 !important;
+    }
+
+    .fleet-card:first-child {
+        margin-left: 0 !important;
+    }
+}
+
+/* Large desktops (xxl) - 1400px and up */
+@media (min-width: 1400px) {
+    .carousel-container {
+        max-width: 1600px;
+    }
+    
+    .fleet-card:last-child {
+        margin-left: -30px !important;
+    }
+
+    .fleet-card:first-child {
+        margin-left: 17px !important;
+    }
+}
