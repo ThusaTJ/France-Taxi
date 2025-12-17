@@ -40,7 +40,7 @@ body{
 .navbar .nav-link, 
 .navbar .btn, 
 .navbar .dropdown-toggle {
-    font-size: 19px !important;          
+    font-size: 18px !important;          
     color: var(--font-color);
     margin-right: 12px; 
     font-weight: bold;
@@ -397,6 +397,8 @@ body{
     margin: 0 auto;
     position: relative;
     padding: 0 50px;
+    overflow: hidden;
+    z-index: 998;
 }
 
 .carousel-track {
@@ -482,15 +484,15 @@ body{
     transform: translateY(-50%);
     background: rgba(255, 200, 100, 0.9);
     border: none;
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
     cursor: pointer;
-    font-size: 24px;
+    font-size: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 1000;
+    z-index: 999;
     transition: background 0.3s;
 }
 
@@ -499,28 +501,28 @@ body{
 }
 
 .nav-btn.prev {
-    left: -25px;
+    left: 25px;
 }
 
 .nav-btn.next {
-    right: -25px;
+    right: 25px;
 }
 
 .our-service-container h2{
-    font-size: 60px;
+    font-size: 50px;
     font-weight: 700;
     margin-top: 50px;
     margin-bottom: 30px !important;
 }
 
 .our-service-container p{
-    font-size: 22px;
+    font-size: 18px;
     color: rgb(44 37 35);
     margin-bottom: 60px;
 }
 
 .our-service-container h4 {
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .blue-van-reviews {
@@ -536,7 +538,7 @@ body{
 }
 
 .blue-van-reviews .header h1 {
-    font-size: 2.5rem;
+    font-size: 50px;
     font-weight: bold;
     margin-bottom: 20px;
 }
