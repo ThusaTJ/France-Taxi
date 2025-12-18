@@ -12,6 +12,7 @@ body{
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     overflow-x: hidden;
+    box-sizing: border-box;
 }
 
 /* ========================================== */
@@ -32,7 +33,7 @@ body{
 .navbar-brand img{
     height: 80px;
     width: auto;
-    max-width: 250px !important;
+    max-width: 450px !important;
 }
 
 .navbar, 
@@ -709,447 +710,22 @@ body{
 
 /* Mobile (xs - Extra Small) - 0 to 575px */
 @media (max-width: 575px) { 
-    /* Navbar */
-    .navbar {
-        height: auto !important;
-        padding: 10px 0 !important;
-    }
-    
-    .navbar .navbar-brand img {
-        width: 150px !important;
-        height: auto !important;
-    }
-    
-    .navbar .nav-link, .navbar .btn, .navbar .dropdown-toggle {
-        font-size: 15px !important;
-        margin-right: 0 !important;
-        padding: 8px 12px !important;
-    }
-    
-    .navbar a[href="/booknow"].btn {
-        font-size: 13px !important;
-        padding: 8px 15px !important;
-        border-radius: 10px !important;
-        margin-top: 10px;
-        width: 100%;
-    }
-    
-    .navbar .navbar-collapse {
-        margin-top: 15px;
-    }
-    
-    .navbar-nav {
-        margin: 0 !important;
-        width: 100%;
-    }
-    
-    .navbar .nav-item {
-        width: 100%;
-        text-align: left;
-    }
-    
-    .navbar .d-flex {
-        flex-direction: column !important;
-        align-items: flex-start !important;
-        width: 100%;
-        gap: 10px !important;
-    }
-    
-    .navbar .dropdown {
-        width: 100%;
-    }
-    
-    .navbar .dropdown button {
-        width: 100%;
-        text-align: left;
-    }
-    
-    /* Hero Section */
-    .bg-container {
-        background-attachment: scroll;
-        height: 70vh;
-        min-height: 500px;
-    }
-    
-    .bg-content {
-        padding: 0 15px;
-    }
-    
-    .bg-content h1 {
-        font-size: 22px !important;
-        line-height: 1.4;
-    }
-    
-    .bg-content h1 span {
-        text-indent: 0 !important;
-        margin-top: 10px;
-        font-size: 22px;
-    }
-    
-    /* Message Bar */
-    .message-bar {
-        font-size: 13px;
-        padding: 10px 5px;
-    }
-    
-    /* About Section */
-    .about-container {
-        padding: 30px 15px;
-        font-size: 15px;
-    }
-    
-    .about-container .abt-container {
-        width: 100% !important;
-    }
-    
-    .about-container h2, .transfer-container h2 {
-        font-size: 26px !important;
-        margin-bottom: 15px;
-    }
-    
-    .about-container p {
-        font-size: 14px;
-        line-height: 1.6;
-    }
-    
-    .about-container .btn {
-        font-size: 13px;
-        padding: 8px 16px;
-        margin: 5px;
-    }
-    
-    /* Fleet Section */
-    .container-fleets {
-        padding: 20px 10px;
-    }
-    
-    .our-fleets-container {
-        padding: 20px 10px !important;
-    }
-    
-    .our-fleets-container h2 {
-        font-size: 26px !important;
-        margin-bottom: 20px;
-    }
-    
-    .fleet-card {
-        padding: 20px;
-        margin: 0 auto 20px auto;
-        max-width: 100%;
-    }
-    
-    .vehicle-image {
-        height: 150px;
-    }
-    
-    .vehicle-name {
-        font-size: 15px;
-    }
-    
-    .vehicle-type {
-        font-size: 20px !important;
-        margin-bottom: 15px;
-    }
-    
-    .spec-item {
-        font-size: 14px !important;
-        margin-bottom: 8px;
-    }
-    
-    .spec-item i {
-        width: 18px;
-        font-size: 14px;
-    }
-    
-    .end-fleets p {
-        font-size: 13px !important;
-        padding: 0 10px;
-    }
-    
-    .end-fleets .btn {
-        font-size: 13px;
-        padding: 8px 16px;
-    }
-    
-    /* Transfer Section */
-    .transfer-container {
-        padding: 30px 15px;
-        font-size: 14px;
-    }
-    
-    .transfer-cards-container {
-        gap: 15px;
-    }
-    
-    .transfer-container .transfer-card {
-        max-width: 100%;
-        padding: 15px;
-    }
-    
-    .transfer-card h3 {
-        font-size: 18px;
-    }
-    
-    .transfer-card p {
-        font-size: 14px !important;
-        line-height: 1.5;
-    }
-    
-    .transfer-card .list-transfer li {
-        font-size: 13px !important;
-        margin-bottom: 8px;
-    }
-    
-    .transfer-icon {
-        font-size: 35px !important;
-        width: 60px !important;
-        height: 60px !important;
-        margin-left: 0;
-    }
-    
-    .end-transfers p {
-        font-size: 13px !important;
-        padding: 0 10px;
-    }
-    
-    .end-transfers .btn {
-        font-size: 13px;
-        padding: 8px 16px;
-    }
-    
-    /* Why Choose Section */
-    .why-choose-container {
-        padding: 30px 15px;
-        font-size: 14px;
-    }
-    
-    .why-choose-container h2 {
-        font-size: 26px !important;
-        margin-bottom: 15px;
-    }
-    
-    .why-choose-container p {
-        font-size: 13px !important;
-        line-height: 1.5;
-    }
-    
-    .why-choose-container .row {
-        flex-direction: column-reverse;
-    }
-    
-    .why-choose-container img {
-        width: 100% !important;
-        margin-bottom: 20px;
-    }
-    
-    .why-choose-container .d-flex {
-        flex-direction: column !important;
-    }
-    
-    .why-choose-container li {
-        font-size: 13px;
-        margin-bottom: 8px;
-    }
-    
-    /* Privileges Section */
-    .privileges-cards-container {
-        gap: 15px;
-    }
-    
-    .privileges-cards-container .card {
-        width: 100% !important;
-        padding: 20px;
-        font-size: 14px;
-        margin-bottom: 0;
-    }
-    
-    .privileges-cards-container .card h5 {
-        font-size: 16px;
-    }
-    
-    .privileges-cards-container .card p {
-        font-size: 13px;
-        margin-top: 10px;
-    }
-    
-    .privileges-cards-container i {
-        font-size: 40px !important;
-    }
-    
-    /* Carousel */
-    .carousel-container {
-        padding: 0 10px;
-        max-width: 100%;
-    }
-    
-    .carousel-slide {
-        min-width: calc(100% - 10px) !important;
-        margin: 0 5px;
-    }
-    
-    .slide-images {
-        height: 180px;
-    }
-    
-    .slide-content {
-        padding: 15px;
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .slide-title {
-        font-size: 14px !important;
-        margin-bottom: 10px;
-    }
-    
-    .slide-content .book-btn {
-        padding: 8px 16px;
-        font-size: 11px;
-        width: 100%;
-        justify-content: center;
-    }
-    
-    .nav-btn {
-        width: 30px !important;
-        height: 30px !important;
-        font-size: 16px !important;
-    }
-    
-    .nav-btn.prev {
-        left: 0 !important;
-    }
-    
-    .nav-btn.next {
-        right: 0 !important;
-    }
-    
-    /* Service Locations */
-    .our-service-container {
-        padding: 20px 15px;
-    }
-    
-    .our-service-container h2 {
-        font-size: 26px !important;
-        margin-top: 20px !important;
-        margin-bottom: 15px !important;
-    }
-    
-    .our-service-container p {
-        font-size: 13px !important;
-        margin-bottom: 30px !important;
-        padding: 0 10px;
-    }
-    
-    .our-service-container h4 {
-        font-size: 15px !important;
-        padding: 0 10px;
-    }
-    
-    /* Reviews */
-    .blue-van-reviews {
-        padding: 30px 0;
-    }
-    
-    .blue-van-reviews .header {
-        padding: 0 15px 30px;
-    }
-    
-    .blue-van-reviews .header h1 {
-        font-size: 1.3rem !important;
-    }
-    
-    .blue-van-reviews .tripadvisor-badge {
-        font-size: 11px;
-        padding: 6px 12px;
-        gap: 5px;
-    }
-    
-    .blue-van-reviews .tripadvisor-logo {
-        width: 24px;
-        height: 24px;
-    }
-    
-    .blue-van-reviews .review-card {
-        margin: 10px 5px;
-        padding: 15px;
-        min-height: auto !important;
-    }
-    
-    .blue-van-reviews .reviewer-name {
-        font-size: 1rem !important;
-    }
-    
-    .blue-van-reviews .contributions {
-        font-size: 0.75rem;
-    }
-    
-    .blue-van-reviews .review-text {
-        font-size: 0.85rem;
-        line-height: 1.5;
-    }
-    
-    .blue-van-reviews .stars {
-        font-size: 1rem;
-    }
-    
-    .blue-van-reviews .review-badge {
-        font-size: 0.7rem;
-        padding: 3px 10px;
-    }
-    
-    .blue-van-reviews .review-date {
-        font-size: 0.7rem;
-    }
-    
-    .blue-van-reviews .carousel-control-prev,
-    .blue-van-reviews .carousel-control-next {
-        width: 35px;
-        height: 35px;
-    }
-    
-    .blue-van-reviews .carousel-control-prev {
-        left: -15px;
-    }
-    
-    .blue-van-reviews .carousel-control-next {
-        right: -15px;
-    }
-    
-    /* Contact Icons */
-    .blue-van-contact-icons {
-        left: 5px;
-        gap: 8px;
-    }
-    
-    .blue-van-contact-icon {
-        width: 38px !important;
-        height: 38px !important;
-        font-size: 0.95rem !important;
-    }
-    
-    .blue-van-plane-icon {
-        width: 42px !important;
-        height: 42px !important;
-        font-size: 1.1rem !important;
-        right: 10px !important;
-        bottom: 10px !important;
-    }
-}
-
-/* ========================================== */
-/* MOBILE RESPONSIVE CSS (0-575px) */
-/* ========================================== */
-
-@media (max-width: 575px) { 
     /* NAVBAR */
     .navbar {
         height: auto !important;
         padding: 10px 0 !important;
+        display: flex;
     }
     
     .navbar .navbar-brand img {
         width: 200px !important;
         height: auto !important;
+    }
+
+    .navbar-toggler{
+        align-items: right !important;
+        margin-right: 15px !important;
+        justify-content: right !important;
     }
 
     .navbar .nav-link, 
@@ -1159,6 +735,7 @@ body{
         margin-right: 0 !important;
         padding: 8px 12px !important;
         z-index: 1000;
+        display: block;
     }
     
     .navbar a[href="/booknow"].btn {
@@ -1166,10 +743,10 @@ body{
         padding: 8px 15px !important;
         border-radius: 10px !important;
         margin-top: 10px;
-        width: 100%;
         z-index: 1;
+       
     }
-    
+
     .navbar .navbar-collapse {
         margin-top: 15px;
     }
@@ -1184,20 +761,15 @@ body{
         text-align: left;
     }
     
-    .navbar .d-flex {
-        flex-direction: column !important;
-        align-items: flex-start !important;
-        width: 100%;
-        gap: 8px !important;
-    }
     
     .navbar .dropdown {
-        width: 100%;
+        width: 50%;
     }
     
     .navbar .dropdown button {
         width: 100%;
         text-align: left;
+        display: block;
     }
     
     /* HERO SECTION */
@@ -1441,6 +1013,7 @@ body{
     .carousel-container {
         padding: 0 10px !important;
         max-width: 100% !important;
+        
     }
     
     .carousel-slide {
