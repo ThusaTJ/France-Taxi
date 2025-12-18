@@ -1236,6 +1236,11 @@ body{
     .about-container h2, .transfer-container h2 {
         font-size: 34px !important;
     }
+
+    .about-container, .transfer-container {
+        font-size: 16px;
+        width: 100%;
+    }
     
     .our-fleets-container h2 {
         font-size: 34px !important;
@@ -1336,21 +1341,21 @@ body{
     }
     
     .navbar .navbar-brand img {
-        width: 280px !important;
+        width: 200px !important;
     }
     
     .navbar .nav-link, .navbar .btn, .navbar .dropdown-toggle {
-        font-size: 19px !important;
-        margin-right: 8px !important;
+        font-size: 13px !important;
+        margin-right: 3px !important;
     }
     
     .navbar a[href="/booknow"].btn {
-        font-size: 16px !important;
+        font-size: 13px !important;
         padding: 12px 22px !important;
     }
     
     .bg-content h1 {
-        font-size: 48px !important;
+        font-size: 40px !important;
     }
     
     .bg-content h1 span {
@@ -1388,6 +1393,7 @@ body{
     .carousel-slide {
         min-width: calc(33.333% - 20px) !important;
     }
+    
 }
 
 /* Desktops (xl) - 1200px to 1399px */
